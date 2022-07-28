@@ -1,0 +1,6 @@
+FROM python:3
+ADD twilio1_lgonly.py /
+ENV TWILIO_ACCOUNT_SID='***'
+ENV TWILIO_AUTH_TOKEN='***'
+RUN pip3 install twilio
+CMD [ "python", "./twilio1_lgonly.py" ]
